@@ -1,102 +1,114 @@
-# Basic Configuration
-baseURL = "/"
+baseURL = "http://greendonewright.com/"
 languageCode = "en-us"
-title = "Your Site Title"
-theme = "hugo-saasify-theme"
+title = "Green Done Wright"
+theme = "alpha-church"
+themesDir = "./themes"
 
-# Required Features
-pygmentsCodeFences = true  # Enable syntax highlighting
-pygmentsUseClasses = true
-enableEmoji = true        # Enable emoji support
-enableGitInfo = true      # Enable Git info for lastmod
+rssLimit = 5
+pagination.pagerSize = 4
 
-# Required Module Configuration
-[module]
-  [module.hugoVersion]
-    extended = true
-    min = "0.80.0"
+enableEmoji = true
 
-# Required Build Configuration
-[build]
-  writeStats = true      # Required for TailwindCSS
+# Enter your tracking code to enable Google Analytics
+[services]
+  [services.googleAnalytics]
+    ID = ""
 
-# Required Markup Configuration
-[markup]
-  [markup.highlight]
-    noClasses = false
-    lineNos = true
-    codeFences = true
-  [markup.goldmark.renderer]
-    unsafe = true       # Allow HTML in markdown
-  [markup.tableOfContents]
-    endLevel = 3
-    ordered = false
-    startLevel = 2
+[security]
+  enableInlineShortcodes = true
 
-# Theme Parameters
-[params]
-  description = "Your site description"
-  author = "Your Name"
-  logo = "/images/logo.svg"      # Path to your logo
-  # Google Analytics ID (e.g., "G-XXXXXXXXXX")
-  googleAnalytics = "G-XXXXXXXXXX"  # Only enabled in production
+[markup.goldmark.renderer]
+  unsafe = true
 
-  # Google Tag Manager ID (e.g., "GTM-XXXXXXX")
-  # Only enabled in production
-  googleTagManager = "GTM-XXXXXXX"
+[taxonomies]
+  tag = "tags"
+  series = "series"
 
-  # Header Configuration
-  [params.header]
-    background = "bg-white/80 backdrop-blur-sm"
-    border = "border-b border-gray-100"
-    
-    # Header Logo
-    [params.header.logo]
-      src = "/images/logo.svg"
-    
-    # Header Buttons (optional)
-    [params.header.buttons]
-      [params.header.buttons.signIn]
-        text = "Sign in"
-        url = "/signin"
-      [params.header.buttons.getStarted]
-        text = "Get Started"
-        url = "/get-started"
-
-  # Global CTA Configuration (optional)
-  [params.cta]
-    enable = true
-    title = "Ready to Get Started?"
-    description = "Join companies using our platform"
-    [params.cta.primary_button]
-      text = "Get Started Free"
-      url = "/get-started"
-    [params.cta.secondary_button]
-      text = "Book Demo"
-      url = "/demo"
-
-  # Social Media Links (optional)
-  [params.social]
-    linkedin = "https://linkedin.com/in/yourusername"
-    twitter = "https://twitter.com/yourusername"
-    github = "https://github.com/yourusername"
-
-# Navigation Menu
+#This theme can generate a multi-level menu.
+#Use weight= to specify the order of menu items, and parent= to create a submenu item.
 [menu]
   [[menu.main]]
-    name = "Features"
+    name = "Home"
+    url = "/"
     weight = 1
-    [menu.main.params]
-      has_submenu = true
-      submenu = [
-        { name = "Feature 1", url = "/features/feature-1/" },
-        { name = "Feature 2", url = "/features/feature-2/" }
-      ]
+
   [[menu.main]]
-    name = "Pricing"
-    url = "/pricing"
+    name = "About"
+    url = "/about"
     weight = 2
+
   [[menu.main]]
-    name = "Blog"
-    url = "/blog"
+    name = "Events & Classes"
+    url = "/events"
     weight = 3
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact"
+    weight = 4
+
+# Paramaters for the whole site
+[params]
+  title = "Green Done Wright"
+  subtitle = "Your Guide to Sustainability"
+  keywords = ["theme", "hugo", "Gardening"]
+  languageCode = "en" # For accessibility this needs to be set. You can find all language codes at https://www.w3schools.com/tags/ref_language_codes.asp
+  instant_page = true
+  customCSS = ["example.css"]
+
+  [params.author]
+    name = "Andrew W."
+    email = "greendonewright@gmail.com"
+
+  [params.favicon]
+    sml = "/example16.png"
+    med = "/example32.png"
+    #lge = "example96.png"
+
+  [params.banner]
+    image = "img/banner.jpg"
+
+  [params.style]
+    googleFonts = ["Cardo", "Crimson+Text", "Merriweather", "Playfair+Display:400,700", "Roboto+Slab"]
+
+
+#  [params.map]
+#    service = "osm" #"osm" for OpenStreetMaps, "google" for Google Maps, or "mapbox" for Mapbox, see SETUP.md
+    # For Open Street Map widgets
+#    latitude = "48.8530"
+#    longitude = "2.3498"
+#    zoom = "18"
+    # If you want to use google maps you'll need an API Key from Google https://developers.google.com/maps/documentation/embed/get-api-key
+    #service = "google"
+    #api_key = ""
+    #language = "fr" #Optional
+    #region = "FR" #Optional
+
+  [params.contact]
+    #Use this section to automate contact form.
+    #Set service to either "netlify", "formspree" or "php"
+    #For formspree, please setup an account at https://formspree.io/
+    #For netlify, please read https://www.netlify.com/docs/form-handling/
+    #
+    #If you use netlify, you'll need to set the confirm_page value (otherwise users will see a generic netlify response)
+    #If you use formspree, you'll need to set your formspree form_id.
+    #
+    #If you use php, you need to host this site on a Server capable of running php.
+    # Please edit the /static/contact_mail.php file from the exampleSite.
+    service = "formspree" #or "formspree" or "php"
+    # confirm_page = "/contact_thanks" #only used by netlify
+    formspree_formid="xdklgdgk" #only used by formspree
+
+
+    [params.footer]
+      copyright = ["[CC0 (public domain)](//creativecommons.org/publicdomain/zero/1.0/)",
+                   "Design: [HTML5 UP](//html5up.net/alpha)",
+                   "[Hugo Port](//gohugo.io) by [Daniel Saunders](//github.com/funkydan2)"
+                  ]
+
+
+#    [[params.links]]
+#      service = "Instagram"
+#      icon = "fa-instagram"
+#      icon_pack = "fab"
+#      link = "//instagram.com"

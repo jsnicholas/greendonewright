@@ -1,94 +1,55 @@
----
-title: Home
-client_logos:
-  - name: "Customer 1"
-    logo: "/images/logos/customer-1.png"
-  - name: "Customer 2"
-    logo: "/images/logos/customer-2.png"
-  - name: "Customer 3"
-    logo: "/images/logos/customer-3.png"
-  - name: "Customer 4"
-    logo: "/images/logos/customer-4.png"
-  - name: "Customer 5"
-    logo: "/images/logos/customer-5.png"
-testimonials:
-  - name: "John Smith"
-    title: "CTO at TechStartup"
-    avatar: "/images/testimonial-1.svg"
-    quote: "We built our SaaS website in record time. The performance is incredible, and our users love the modern, clean design."
-  - name: "Sarah Johnson"
-    title: "Founder at WebFlow"
-    avatar: "/images/testimonial-1.svg"
-    quote: "The combination of Hugo and TailwindCSS delivers lightning-fast performance. Our website loads instantly, which has significantly improved our conversion rates."
-  - name: "Michael Chen"
-    title: "Lead Developer at CloudTech"
-    avatar: "/images/testimonial-1.svg"
-    quote: "This theme made it easy to create a professional SaaS website. The build times are incredibly fast, and the code is clean and maintainable."
----
++++
+[banner]
+  [[banner.button]]
+      url = "/contact"
+      text = "Get in touch"
+      type = "primary"
 
-{{< hero 
-    headline="Build Your SaaS Website"
-    sub_headline="Create stunning, responsive websites that load instantly. Built with Hugo and TailwindCSS for maximum performance and flexibility."
-    primary_button_text="Get Started Free"
-    primary_button_url="#"
-    secondary_button_text="View Demo"
-    secondary_button_url="#"
-    hero_image="/images/hero-dashboard.svg"
-    gradient-from="#dbeafe"
-    gradient-to="#f3e8ff"
-    gradient-angle="180"
->}}
+  [[banner.button]]
+      url = "#feature-icons"
+      text = "Find out more"
 
-{{< client-logos animate="true" >}}
+#Details for the box below the banner
+[services]
+  title = "Why Choose Sustainability?"
+  text = "Sustainability is based on a simple principle: Everything that we need for our survival and well-being depends, either directly or indirectly, on our natural environment. To pursue sustainability is to create and maintain the conditions under which humans and nature can exist in productive harmony to support present and future generations."
+  map_location = "Cathédrale Notre-Dame de Paris"
 
-{{< features-section 
-    title="Modern Features for Modern Websites"
-    description="Discover how our theme helps you build fast, beautiful SaaS websites with ease."
->}}
+[feature_icons]
+  #These feature icons look best if there's an even number of them.
+  enable = true
 
-{{< feature
-    title="Lightning-Fast Performance"
-    description="Leverage Hugo's blazing-fast build times and optimized output. Your website loads instantly, providing an exceptional user experience."
-    badge="Performance"
-    badgeColor="#2563eb"
-    image="/images/feature-1.svg"
-    buttonText="Learn More"
-    buttonLink="/features/performance/"
-    features="Sub-second page loads,Optimized assets,Minimal JavaScript,CDN-ready output"
-    imagePosition="right"
->}}
+  #Accent is a colour defined in the CSS file. Choose between 1 and 5
+  [[feature_icons.tile]]
+#    title = "Serve"
+    text = "<img src='img/hands.jpeg'>"
+    url = "/about"
 
-{{< feature
-    title="Beautiful Design System"
-    description="Create stunning user interfaces with our comprehensive design system built on TailwindCSS. Customize everything to match your brand."
-    badge="Design"
-    badgeColor="#7c3aed"
-    image="/images/feature-2.svg"
-    buttonText="Learn More"
-    buttonLink="/features/design-system/"
-    features="Modern UI components,Responsive design,Custom typography,Flexible layouts"
-    imagePosition="left"
->}}
+  [[feature_icons.tile]]
+    title = "My Hopes & Goals"
+    text = "I'm Andrew Wright, I started Green Done Wright because I wanted to grow a greener community and share my experience. My goal is to lead more sustainable events and workshops around Atlanta. I hope to provide information that you are looking for and connect you to the helpful resources."
+    button = "/about"
 
-{{< feature
-    title="Developer Experience"
-    description="Enjoy a seamless development experience with hot reload, component-based architecture, and clean, maintainable code."
-    badge="Development"
-    badgeColor="#16a34a"
-    image="/images/feature-3.svg"
-    buttonText="Learn More"
-    buttonLink="/features/developer-experience/"
-    features="Component system,Easy customization,Clean code,Detailed documentation"
-    imagePosition="right"
->}}
+[feature_images]
+#These feature images look best if there's an even number of them.
+  enable = true
 
-{{< /features-section >}}
+  [[feature_images.tile]]
+    image = "img/event.jpeg"
+    title = "Events & Classes"
+    text = "Learn about upcoming sustainability events and classes that I'm offering."
+    url = "/events"
+    button_text = "RSVP"
 
-{{< testimonials 
-    title="Trusted by Modern Web Teams"
-    description="See how teams are building better websites with our theme."
-    animate="true"
-    background-color="#f1f5f9"
->}}
+  [[feature_images.tile]]
+    image = "img/compost.jpeg"
+    title = "Landscape & Gardening"
+    text = "Book a consultation with me today!"
+    url = "/contact"
+    button_text="Book Now"
 
-{{< cta >}}
+[CTA]
+  enable = true
+  heading = "Get in touch!"
+  message = "We'd love to hear from you."
++++
