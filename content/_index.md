@@ -13,7 +13,6 @@
 [services]
   title = "Why Choose Sustainability?"
   text = "Sustainability is based on a simple principle: Everything that we need for our survival and well-being depends, either directly or indirectly, on our natural environment. To pursue sustainability is to create and maintain the conditions under which humans and nature can exist in productive harmony to support present and future generations."
-  map_location = "Cathédrale Notre-Dame de Paris"
 
 [feature_icons]
   #These feature icons look best if there's an even number of them.
@@ -27,8 +26,8 @@
 
   [[feature_icons.tile]]
     title = "My Hopes & Goals"
-    text = "I'm Andrew Wright, I started Green Done Wright because I wanted to grow a greener community and share my experience. My goal is to lead more sustainable events and workshops around Atlanta. I hope to provide information that you are looking for and connect you to the helpful resources."
-    button = "/about"
+    text = "<p>I'm Andrew Wright, I started Green Done Wright because I wanted to grow a greener community and share my experience. My goal is to lead more sustainable events and workshops around Atlanta. I hope to provide information that you are looking for and connect you to the helpful resources.</p> <a class='button alt' href='/about'>Learn More</a>"
+    buttonLink = "/about"
 
 [feature_images]
 #These feature images look best if there's an even number of them.
