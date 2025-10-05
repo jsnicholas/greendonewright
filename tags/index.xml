@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Green Done Wright</title>
-    <link>http://greendonewright.com/tags/</link>
+    <link>https://greendonewright.com/tags/</link>
     <description>Recent content in Tags on Green Done Wright</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>greendonewright@gmail.com (Andrew W.)</managingEditor>
     <webMaster>greendonewright@gmail.com (Andrew W.)</webMaster>
-    <atom:link href="http://greendonewright.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://greendonewright.com/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
